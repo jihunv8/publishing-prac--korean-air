@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import * as media from '../../global-style/mediaSize';
 
 import koreanairLogoPC from '../../images/logos/logo--koreanair-pc.png';
 import koreanairLogoM from '../../images/logos/logo--koreanair-m.png';
@@ -12,7 +13,7 @@ import hamburgerIcon from '../../images/icons/drawer-trigger.svg';
 import { useMediaQuery } from 'react-responsive';
 
 function Header() {
-  const isTabletSize = useMediaQuery({ maxWidth: '1060px' });
+  const isTabletSize = useMediaQuery({ maxWidth: media.screenLarge });
 
   return (
     <HeaderWrapper>
@@ -80,9 +81,20 @@ const Logos = styled.div`
     display: block;
   }
 
-  @media screen and (max-width: 1060px) {
+  @media ${media.maxWidthLarge} {
+    > a {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      > img {
+        width: 132px;
+      }
+    }
+  }
+
+  @media ${media.maxWidthXSmall} {
     > a > img {
-      width: 132px;
+      width: 105px;
     }
   }
 `;
@@ -102,19 +114,26 @@ const Menu = styled.div`
   grid-template-columns: repeat(4, 1fr);
   column-gap: 10px;
 
-  @media screen and (max-width: 1060px) {
+  @media ${media.maxWidthLarge} {
     column-gap: 0;
   }
 `;
 
 const MenuItemStyle = css`
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   background: url(${({ imgUrl }) => imgUrl}) no-repeat center / 44px;
   transition: background-size 0.15s;
 
   &:hover {
     background-size: 48px;
+  }
+
+  @media ${media.maxWidthXSmall} {
+    column-gap: 0;
+    width: 35px;
+    height: 40px;
+    background-size: 40px;
   }
 `;
 
