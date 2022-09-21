@@ -5,12 +5,21 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1.6rem;
+    font-size: inherit;
     font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
   }
 
   :root {
     font-size: 62.5%;
+  }
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
   }
 
   button {
@@ -20,6 +29,8 @@ const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
   }
+
+  
 `;
 
 export default GlobalStyle;

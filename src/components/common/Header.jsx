@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 import * as media from '../../global-style/mediaSize';
 
 import koreanairLogoPC from '../../images/logos/logo--koreanair-pc.png';
@@ -10,7 +11,6 @@ import alramIcon from '../../images/icons/util__link--alram-off.svg';
 import cartIcon from '../../images/icons/util__link--cart-off.svg';
 import searchIcon from '../../images/icons/util__link--search.svg';
 import hamburgerIcon from '../../images/icons/drawer-trigger.svg';
-import { useMediaQuery } from 'react-responsive';
 
 function Header() {
   const isTabletSize = useMediaQuery({ maxWidth: media.screenLarge });
@@ -68,7 +68,7 @@ const HeaderWrapper = styled.header`
 
 const HeaderArea = styled.div`
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: ${media.maxContentsArea};
   display: flex;
   justify-content: space-between;
   align-items: center;

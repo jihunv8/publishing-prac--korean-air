@@ -1,3 +1,5 @@
+export const maxContentsArea = '1280px';
+
 const screenSize = {
   xLarge: '1440px',
   large: '1060px',
