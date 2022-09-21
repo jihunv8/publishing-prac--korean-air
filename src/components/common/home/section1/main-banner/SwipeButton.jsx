@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { layoutCSS } from '../../../../../util/layoutCSS';
 
 import prevArrowIcon from '../../../../../images/icons/carousel-icon-prev-ctrl.svg';
 import nextArrowIcon from '../../../../../images/icons/carousel-icon-next-ctrl.svg';
@@ -23,7 +24,7 @@ function SwipeButton({ currentPage = -1, maxPage = -1, setCurrentPage = () => {}
   };
 
   return (
-    <SwipeButtonWrapper>
+    <SwipeButtonWrapper layoutCSS={layoutCSS}>
       <PrevButton onClick={swipeToPrevPage} />
       <PageNumber>
         <span>{currentPage + 1}</span> / {maxPage}
