@@ -8,7 +8,7 @@ import SwipeButton from './SwipeButton';
 import dummyData from './pagesDummyData';
 
 function MainBanner() {
-  const [currentPage, setCurrentPage] = useState(2);
+  const [currentPage, setCurrentPage] = useState(0);
   const [pages, setPages] = useState(dummyData);
   return (
     <MainBannerWrapper>
