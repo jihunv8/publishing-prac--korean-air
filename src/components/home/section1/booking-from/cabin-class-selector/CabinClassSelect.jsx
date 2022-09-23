@@ -5,7 +5,7 @@ import selectIcon from '../../../../../images/icons/ico-select.svg';
 function CabinClassSelect({ ...props }) {
   return (
     <CabinClassSelectWrapper {...props}>
-      <Label for="cabin-class-select">좌석 등급</Label>
+      <Label htmlFor="cabin-class-select">좌석 등급</Label>
       <Select id="cabin-class-select">
         <option value="일반석">일반석</option>
         <option value="프레스티지석">프레스티지석</option>

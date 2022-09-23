@@ -6,7 +6,7 @@ function FlexibleDatesCheckBox() {
   return (
     <FlexibleDatesCheckBoxWrapper>
       <CheckBox type="checkbox" id="flexible-date-checkbox" />
-      <Label for="flexible-date-checkbox">가까운 날짜 함께 조회</Label>
+      <Label htmlFor="flexible-date-checkbox">가까운 날짜 함께 조회</Label>
     </FlexibleDatesCheckBoxWrapper>
   );
 }
