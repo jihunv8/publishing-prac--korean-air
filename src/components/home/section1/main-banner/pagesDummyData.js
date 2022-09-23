@@ -1,9 +1,9 @@
-import mapPCImage from '../../../../../images/bg/map_pc.jpg';
-import mapTabletImage from '../../../../../images/bg/map_ta.jpg';
-import mapMobileImage from '../../../../../images/bg/map_mo.jpg';
+import mapPCImage from '../../../../images/bg/map_pc.jpg';
+import mapTabletImage from '../../../../images/bg/map_ta.jpg';
+import mapMobileImage from '../../../../images/bg/map_mo.jpg';
 
-import bannerImage2 from '../../../../../images/bg/keyvisual_pc_sherpa.jpg';
-import bannerImage3 from '../../../../../images/bg/H_PLCC_pc.jpg';
+import bannerImage2 from '../../../../images/bg/keyvisual_pc_sherpa.jpg';
+import bannerImage3 from '../../../../images/bg/H_PLCC_pc.jpg';
 
 const dummyData = [
   {

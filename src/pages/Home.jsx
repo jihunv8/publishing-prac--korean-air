@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Header from '../components/common/Header';
-import Section1 from '../components/common/home/section1/Section1';
+import Section1 from '../components/home/section1/Section1';
 
 function Home() {
   return (

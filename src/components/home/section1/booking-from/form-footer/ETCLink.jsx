@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import rightArrowIcon from '../../../../../../images/icons/ico-right-white.svg';
+import rightArrowIcon from '../../../../../images/icons/ico-right-white.svg';
 
 function ETCLink({ children, ...props }) {
   return <ETCLinkWrapper {...props}>{children}</ETCLinkWrapper>;

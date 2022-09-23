@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { layoutCSS } from '../../../../../../util/layoutCSS';
+import { layoutCSS } from '../../../../../util/layoutCSS';
 
 import AirlineTypeSelector from './AirlineTypeSelector';
 import DateSelector from './DateSelector';

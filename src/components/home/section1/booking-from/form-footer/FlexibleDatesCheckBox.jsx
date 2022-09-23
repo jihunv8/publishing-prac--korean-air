@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import checkBoxIcon from '../../../../../../images/icons/icon-w-checkbox.svg';
+import checkBoxIcon from '../../../../../images/icons/icon-w-checkbox.svg';
 
 function FlexibleDatesCheckBox() {
   return (

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { layoutCSS } from '../../../../../../util/layoutCSS';
+import { layoutCSS } from '../../../../../util/layoutCSS';
 
 import NumOfPassengersButton from './NumOfPassengersButton';
 

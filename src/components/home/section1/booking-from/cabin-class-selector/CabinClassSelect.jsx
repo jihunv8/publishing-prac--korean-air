@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import selectIcon from '../../../../../../images/icons/ico-select.svg';
+import selectIcon from '../../../../../images/icons/ico-select.svg';
 
 function CabinClassSelect({ ...props }) {
   return (

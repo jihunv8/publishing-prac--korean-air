@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import passengerIcon from '../../../../../../images/icons/quickbooking__passenger.svg';
+import passengerIcon from '../../../../../images/icons/quickbooking__passenger.svg';
 
 function NumOfPassengersButton({ ...props }) {
   return (

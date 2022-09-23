@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { layoutCSS } from '../../../../../../util/layoutCSS';
+import { layoutCSS } from '../../../../../util/layoutCSS';
 
-import calendarIcon from '../../../../../../images/icons/quickbooking__calendar.svg';
+import calendarIcon from '../../../../../images/icons/quickbooking__calendar.svg';
 
 function DateSelector({ layoutCSS, ...props }) {
   return (

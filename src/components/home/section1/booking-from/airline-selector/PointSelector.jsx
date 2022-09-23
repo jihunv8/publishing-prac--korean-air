@@ -1,9 +1,9 @@
 import styled from 'styled-components';
+import { layoutCSS } from '../../../../../util/layoutCSS';
 
 import PointSelectButton from './PointSelectButton';
 
-import swapIcon from '../../../../../../images/icons/booking__swap--disabled.svg';
-import { layoutCSS } from '../../../../../../util/layoutCSS';
+import swapIcon from '../../../../../images/icons/booking__swap--disabled.svg';
 
 function PointSelector({ from = { code: 'SEL', name: '서울' }, to = { code: 'To', name: '도착지' }, layoutCSS }) {
   return (

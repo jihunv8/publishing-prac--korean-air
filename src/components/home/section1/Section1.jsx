@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
-import { maxContentsArea } from '../../../../global-style/mediaSize';
+import { maxContentsArea } from '../../../global-style/mediaSize';
 
 import MainBanner from './main-banner/MainBanner';
-import BookingForm from './booking-form/BookingForm';
+import BookingForm from './booking-from/BookingForm';
 
 function Section1() {
   return (

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { layoutCSS } from '../../../../../util/layoutCSS';
+import { layoutCSS } from '../../../../util/layoutCSS';
 
-import prevArrowIcon from '../../../../../images/icons/carousel-icon-prev-ctrl.svg';
-import nextArrowIcon from '../../../../../images/icons/carousel-icon-next-ctrl.svg';
+import prevArrowIcon from '../../../../images/icons/carousel-icon-prev-ctrl.svg';
+import nextArrowIcon from '../../../../images/icons/carousel-icon-next-ctrl.svg';
 
 function SwipeButton({ currentPage = -1, maxPage = -1, setCurrentPage = () => {} }) {
   const swipeToPrevPage = () => {

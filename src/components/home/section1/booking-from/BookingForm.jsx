@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { layoutCSS } from '../../../../../util/layoutCSS';
+import { layoutCSS } from '../../../../util/layoutCSS';
 
 import Form from './Form';
 
-import bgImage from '../../../../../images/bg/quickbooking__bg.svg';
+import bgImage from '../../../../images/bg/quickbooking__bg.svg';
 
 function BookingForm({ layoutCSS }) {
   return (

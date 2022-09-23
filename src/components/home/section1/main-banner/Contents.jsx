@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import * as media from '../../../../../global-style/mediaSize';
+import * as media from '../../../../global-style/mediaSize';
 
-import rightArrowIcon from '../../../../../images/icons/right.svg';
-import { layoutCSS } from '../../../../../util/layoutCSS';
+import rightArrowIcon from '../../../../images/icons/right.svg';
+import { layoutCSS } from '../../../../util/layoutCSS';
 
 function Contents({ title = '제목 없음', url = '', bgImage = {}, layoutCSS }) {
   return (
