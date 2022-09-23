@@ -3,6 +3,7 @@ import { maxContentsArea } from '../../../global-style/mediaSize';
 
 import MainBanner from './main-banner/MainBanner';
 import BookingForm from './booking-from/BookingForm';
+import FrequencyMenu from './frequency-menu/FrequencyMenu';
 
 function Section1() {
   return (
@@ -11,6 +12,7 @@ function Section1() {
       <BookingFormWrapper>
         <BookingForm layoutCSS={BookingFormLayoutCSS} />
       </BookingFormWrapper>
+      <FrequencyMenu layoutCSS={FrequencyMenuLayoutCSS} />
     </Section1Wrapper>
   );
 }
@@ -30,4 +32,8 @@ const BookingFormWrapper = styled.div`
 
 const BookingFormLayoutCSS = css`
   transform: translateX(300px);
+`;
+
+const FrequencyMenuLayoutCSS = css`
+  margin: 20px auto 0;
 `;
