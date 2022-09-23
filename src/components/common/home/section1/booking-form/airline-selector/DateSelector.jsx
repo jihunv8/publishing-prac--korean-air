@@ -19,12 +19,14 @@ const DateSelectorWrapper = styled.button`
   height: 48px;
   background-color: transparent;
   border: none;
+  border-radius: 3px;
   border-top: dotted 1px #d9dbe1;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #767676;
 
+  &:focus,
   &:hover {
     outline: solid 1px #0064de;
   }
