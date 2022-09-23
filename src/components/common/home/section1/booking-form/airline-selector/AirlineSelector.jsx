@@ -10,7 +10,7 @@ function AirlineSelector({ layoutCSS }) {
     <AirlineSelectorWrapper layoutCSS={layoutCSS}>
       <AirlineTypeSelector layoutCSS={AirlineTypeSelectorLayoutCSS} />
       <PointSelector layoutCSS={PointSelectorLayoutCSS} />
-      <DateSelector layoutCSS={DateSelectorLayoutCSS} />
+      <DateSelector type="button" layoutCSS={DateSelectorLayoutCSS} />
     </AirlineSelectorWrapper>
   );
 }

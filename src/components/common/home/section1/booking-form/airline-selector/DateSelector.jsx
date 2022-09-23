@@ -3,9 +3,9 @@ import { layoutCSS } from '../../../../../../util/layoutCSS';
 
 import calendarIcon from '../../../../../../images/icons/quickbooking__calendar.svg';
 
-function DateSelector({ layoutCSS }) {
+function DateSelector({ layoutCSS, ...props }) {
   return (
-    <DateSelectorWrapper layoutCSS={layoutCSS}>
+    <DateSelectorWrapper layoutCSS={layoutCSS} {...props}>
       <Icon />
       가는 날 ~ 오는 날
     </DateSelectorWrapper>
