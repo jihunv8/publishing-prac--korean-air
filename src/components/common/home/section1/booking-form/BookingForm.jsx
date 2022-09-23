@@ -1,11 +1,13 @@
 import styled from 'styled-components';
+import { layoutCSS } from '../../../../../util/layoutCSS';
 
-import bgImage from '../../../../../images/bg/quickbooking__bg.svg';
 import Form from './Form';
 
-function BookingForm() {
+import bgImage from '../../../../../images/bg/quickbooking__bg.svg';
+
+function BookingForm({ layoutCSS }) {
   return (
-    <BookingFormWrapper>
+    <BookingFormWrapper layoutCSS={layoutCSS}>
       <Form />
     </BookingFormWrapper>
   );
@@ -20,4 +22,6 @@ const BookingFormWrapper = styled.div`
     background: url(${bgImage}) no-repeat center / cover;
     width: 300px;
   }
+
+  ${layoutCSS}
 `;
