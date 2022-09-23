@@ -13,4 +13,11 @@ function BookingForm() {
 
 export default BookingForm;
 
-const BookingFormWrapper = styled.div``;
+const BookingFormWrapper = styled.div`
+  display: flex;
+  &::after {
+    content: '';
+    background: url(${bgImage}) no-repeat center / cover;
+    width: 300px;
+  }
+`;
