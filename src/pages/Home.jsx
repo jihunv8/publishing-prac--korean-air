@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import Header from '../components/common/Header';
 import NoticeBanner from '../components/home/NoticeBanner';
 import Section1 from '../components/home/section1/Section1';
+import Section2 from '../components/home/section2/Section2';
 
 import noticeBannerMockData from './noticeBannerMockData';
 
@@ -19,6 +20,7 @@ function Home() {
         bgImage={notice1Data.bgImage}
         layoutCSS={NoticeBannerLayoutCSS}
       />
+      <Section2 layoutCSS={marginTop60px} />
       <NoticeBanner
         title={notice2Data.title}
         subhead={notice2Data.subhead}
@@ -33,6 +35,10 @@ function Home() {
 export default Home;
 
 const HomeWrapper = styled.div``;
+
+const marginTop60px = css`
+  margin-top: 60px;
+`;
 
 const NoticeBannerLayoutCSS = css`
   margin: 60px auto 0;
