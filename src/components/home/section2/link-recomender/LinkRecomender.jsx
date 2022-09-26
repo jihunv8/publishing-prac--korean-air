@@ -40,13 +40,13 @@ const ContentsArea = styled.div`
   }
 `;
 
-const flexGrow1 = css`
-  flex-grow: 1;
+const flexBasis100Percen = css`
+  flex-basis: 100%;
 `;
 
 const link1CSS = css`
   margin-right: 15px;
-  ${flexGrow1}
+  ${flexBasis100Percen}
 
   @media ${maxWidthLarge} {
     margin-right: 0;
@@ -55,7 +55,7 @@ const link1CSS = css`
 
 const link2CSS = css`
   margin-left: 15px;
-  ${flexGrow1}
+  ${flexBasis100Percen}
 
   @media ${maxWidthLarge} {
     margin-top: 12px;
