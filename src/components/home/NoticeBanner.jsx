@@ -4,16 +4,22 @@ import { layoutCSS } from '../../util/layoutCSS';
 
 function NoticeBanner({ title = '제목 없음', subhead = '부제목 없음', href = '', bgImage = {}, layoutCSS }) {
   return (
-    <NoticeBannerWrapper href={href} bgImage={bgImage} layoutCSS={layoutCSS}>
-      <Title>{title}</Title>
-      <Subhead>{subhead}</Subhead>
+    <NoticeBannerWrapper>
+      <Anchor href={href} bgImage={bgImage} layoutCSS={layoutCSS}>
+        <Title>{title}</Title>
+        <Subhead>{subhead}</Subhead>
+      </Anchor>
     </NoticeBannerWrapper>
   );
 }
 
 export default NoticeBanner;
 
-const NoticeBannerWrapper = styled.a`
+const NoticeBannerWrapper = styled.div`
+  padding: 0 20px;
+`;
+
+const Anchor = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;
