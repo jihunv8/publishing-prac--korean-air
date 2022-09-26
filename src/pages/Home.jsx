@@ -4,6 +4,7 @@ import NoticeBanner from '../components/home/NoticeBanner';
 import Section1 from '../components/home/section1/Section1';
 import Section2 from '../components/home/section2/Section2';
 import Section3 from '../components/home/section3/Section3';
+import Section4 from '../components/home/section4/Section4';
 
 import noticeBannerMockData from './noticeBannerMockData';
 
@@ -30,6 +31,7 @@ function Home() {
         bgImage={notice2Data.bgImage}
         layoutCSS={NoticeBannerLayoutCSS}
       />
+      <Section4 layoutCSS={marginTop60px} />
     </HomeWrapper>
   );
 }
