@@ -23,8 +23,8 @@ const menuData = [
 function UsefulMenu({ layoutCSS }) {
   return (
     <UsefulMenuWrapper layoutCSS={layoutCSS}>
-      {menuData.map((data) => (
-        <MenuItem>
+      {menuData.map((data, i) => (
+        <MenuItem key={i}>
           <Menu title={data.title} href={data.href} iconUrl={data.iconUrl} />
         </MenuItem>
       ))}
