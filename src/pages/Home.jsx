@@ -3,6 +3,7 @@ import Header from '../components/common/Header';
 import NoticeBanner from '../components/home/NoticeBanner';
 import Section1 from '../components/home/section1/Section1';
 import Section2 from '../components/home/section2/Section2';
+import Section3 from '../components/home/section3/Section3';
 
 import noticeBannerMockData from './noticeBannerMockData';
 
@@ -21,6 +22,7 @@ function Home() {
         layoutCSS={NoticeBannerLayoutCSS}
       />
       <Section2 layoutCSS={marginTop60px} />
+      <Section3 layoutCSS={marginTop60px} />
       <NoticeBanner
         title={notice2Data.title}
         subhead={notice2Data.subhead}
