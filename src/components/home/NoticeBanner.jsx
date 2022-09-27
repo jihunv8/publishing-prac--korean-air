@@ -23,7 +23,7 @@ const Anchor = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: tomato url(${({ bgImage }) => bgImage.pc}) no-repeat right center / cover;
+  background: url(${({ bgImage }) => bgImage.pc}) no-repeat right center / cover;
   max-width: ${maxContentsArea};
   height: 120px;
   padding: 30px 320px 34px 40px;
