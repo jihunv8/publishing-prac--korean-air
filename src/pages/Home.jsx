@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
+
 import Header from '../components/common/Header';
+import Footer from '../components/common/footer/Footer';
 import NoticeBanner from '../components/home/NoticeBanner';
 import Section1 from '../components/home/section1/Section1';
 import Section2 from '../components/home/section2/Section2';
@@ -32,6 +34,7 @@ function Home() {
         layoutCSS={NoticeBannerLayoutCSS}
       />
       <Section4 layoutCSS={marginTop60px} />
+      <Footer layoutCSS={marginTop100px} />
     </HomeWrapper>
   );
 }
@@ -41,6 +44,10 @@ export default Home;
 const HomeWrapper = styled.div``;
 
 const marginTop60px = css`
+  margin-top: 60px;
+`;
+
+const marginTop100px = css`
   margin-top: 60px;
 `;
 
