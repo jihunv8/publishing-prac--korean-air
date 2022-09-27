@@ -17,6 +17,7 @@ function Section4({ layoutCSS }) {
 export default Section4;
 
 const Section4Wrapper = styled.section`
+  padding: 0 20px;
   ${layoutCSS}
 `;
 
