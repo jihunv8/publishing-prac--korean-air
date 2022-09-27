@@ -35,5 +35,5 @@ const BookingFormLayoutCSS = css`
 `;
 
 const FrequencyMenuLayoutCSS = css`
-  margin: 20px auto 0;
+  margin-top: 20px;
 `;

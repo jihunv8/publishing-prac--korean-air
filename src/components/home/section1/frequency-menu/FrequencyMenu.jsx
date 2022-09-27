@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { maxContentsArea } from '../../../../global-style/mediaSize';
+import { maxContentsArea, maxWidthLarge } from '../../../../global-style/mediaSize';
 
 import FrequencyMenuLink from './FrequencyMenuLink';
 
@@ -11,15 +11,17 @@ import { layoutCSS } from '../../../../util/layoutCSS';
 function FrequencyMenu({ layoutCSS }) {
   return (
     <FrequencyMenuWrapper layoutCSS={layoutCSS}>
-      <FrequencyMenuLink href="" iconUrl={bookingIcon} layoutCSS={line}>
-        예약 조회
-      </FrequencyMenuLink>
-      <FrequencyMenuLink href="" iconUrl={checkinIcon} layoutCSS={line}>
-        체크인
-      </FrequencyMenuLink>
-      <FrequencyMenuLink href="" iconUrl={scheduleIcon}>
-        항공편 현황
-      </FrequencyMenuLink>
+      <ContentsArea>
+        <FrequencyMenuLink href="" iconUrl={bookingIcon} layoutCSS={line}>
+          예약 조회
+        </FrequencyMenuLink>
+        <FrequencyMenuLink href="" iconUrl={checkinIcon} layoutCSS={line}>
+          체크인
+        </FrequencyMenuLink>
+        <FrequencyMenuLink href="" iconUrl={scheduleIcon}>
+          항공편 현황
+        </FrequencyMenuLink>
+      </ContentsArea>
     </FrequencyMenuWrapper>
   );
 }
@@ -27,11 +29,16 @@ function FrequencyMenu({ layoutCSS }) {
 export default FrequencyMenu;
 
 const FrequencyMenuWrapper = styled.div`
+  padding: 0 20px;
+
+  ${layoutCSS}
+`;
+
+const ContentsArea = styled.div`
   max-width: ${maxContentsArea};
   display: flex;
   justify-content: center;
-
-  ${layoutCSS}
+  margin: 0 auto;
 `;
 
 const line = css`
@@ -44,5 +51,9 @@ const line = css`
     display: block;
     width: 1px;
     height: 20px;
+
+    @media ${maxWidthLarge} {
+      display: none;
+    }
   }
 `;
