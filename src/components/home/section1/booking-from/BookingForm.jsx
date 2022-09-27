@@ -3,7 +3,9 @@ import { layoutCSS } from '../../../../util/layoutCSS';
 
 import Form from './Form';
 
-import bgImage from '../../../../images/bg/quickbooking__bg.svg';
+import bgImagePC from '../../../../images/bg/quickbooking__bg.svg';
+import bgImageM from '../../../../images/bg/quickbooking__m-bg.svg';
+import { maxWidthLarge } from '../../../../global-style/mediaSize';
 
 function BookingForm({ layoutCSS }) {
   return (
@@ -17,10 +19,20 @@ export default BookingForm;
 
 const BookingFormWrapper = styled.div`
   display: flex;
+
   &::after {
     content: '';
-    background: url(${bgImage}) no-repeat center / cover;
+    background: url(${bgImagePC}) no-repeat center / cover;
     width: 300px;
+
+    @media ${maxWidthLarge} {
+      display: none;
+    }
+  }
+
+  @media ${maxWidthLarge} {
+    width: 100%;
+    background: url(${bgImageM}) no-repeat right bottom / auto;
   }
 
   ${layoutCSS}

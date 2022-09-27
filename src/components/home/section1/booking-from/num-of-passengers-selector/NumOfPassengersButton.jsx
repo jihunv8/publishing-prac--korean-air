@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { maxWidthLarge } from '../../../../../global-style/mediaSize';
 
 import passengerIcon from '../../../../../images/icons/quickbooking__passenger.svg';
 
@@ -30,20 +31,32 @@ const NumOfPassengersButtonWrapper = styled.button`
     padding-right: 4px;
     transition: padding-right 0.2s;
   }
+
+  @media ${maxWidthLarge} {
+    position: relative;
+  }
 `;
 
 const Title = styled.span`
   color: #767676;
+
+  @media ${maxWidthLarge} {
+    height: auto;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 `;
 
 const Selected = styled.span`
-  display: flex;
+  padding-right: 30px;
+  background: url(${passengerIcon}) no-repeat right center / 24px;
 
-  &::after {
-    content: '';
-    background: url(${passengerIcon});
-    width: 24px;
-    height: 24px;
-    margin-left: 6px;
+  @media ${maxWidthLarge} {
+    display: block;
+    width: 100%;
+    padding-top: 19px;
+    text-align: left;
   }
 `;

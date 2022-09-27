@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { maxContentsArea } from '../../../global-style/mediaSize';
+import { maxContentsArea, maxWidthLarge } from '../../../global-style/mediaSize';
 
 import MainBanner from './main-banner/MainBanner';
 import BookingForm from './booking-from/BookingForm';
@@ -28,10 +28,18 @@ const BookingFormWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   max-width: ${maxContentsArea};
+
+  @media ${maxWidthLarge} {
+    margin-top: 0;
+  }
 `;
 
 const BookingFormLayoutCSS = css`
   transform: translateX(300px);
+
+  @media ${maxWidthLarge} {
+    transform: translateX(0);
+  }
 `;
 
 const FrequencyMenuLayoutCSS = css`

@@ -10,6 +10,7 @@ import dummyData from './pagesDummyData';
 function MainBanner() {
   const [currentPage, setCurrentPage] = useState(0);
   const [pages, setPages] = useState(dummyData);
+
   return (
     <MainBannerWrapper>
       {pages.map((page, i) => (
@@ -36,6 +37,7 @@ const MainBannerWrapper = styled.div`
   position: relative;
 
   @media ${media.maxWidthLarge} {
+    display: none;
     padding-left: 0;
     padding-right: 0;
   }

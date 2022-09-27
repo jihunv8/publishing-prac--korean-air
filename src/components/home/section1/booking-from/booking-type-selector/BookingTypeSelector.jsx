@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { maxWidthLarge } from '../../../../../global-style/mediaSize';
 
 function BookingTypeSelector() {
   return (
@@ -26,6 +27,10 @@ const BookingTypeButton = styled.button`
   &:hover {
     text-decoration: underline;
   }
+
+  @media ${maxWidthLarge} {
+    height: 40px;
+  }
 `;
 
 const BookingButton = styled(BookingTypeButton)`
@@ -40,5 +45,4 @@ const MileageBookingButton = styled(BookingTypeButton)`
   padding-left: 16px;
   padding-right: 20px;
   border-radius: 22px;
-  font-weight: bold;
 `;

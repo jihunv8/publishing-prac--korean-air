@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { maxWidthLarge } from '../../../../../global-style/mediaSize';
 
 import rightArrowIcon from '../../../../../images/icons/ico-right-white.svg';
 
@@ -18,5 +19,10 @@ const ETCLinkWrapper = styled.a`
 
   &:hover {
     box-shadow: 0 0 0 2px #fff, 0 0 0 4px #0064de;
+  }
+
+  @media ${maxWidthLarge} {
+    font-size: 1.4rem;
+    line-height: 1.57;
   }
 `;

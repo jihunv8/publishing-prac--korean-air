@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { maxWidthLarge } from '../../../../../global-style/mediaSize';
 
 import checkBoxIcon from '../../../../../images/icons/icon-w-checkbox.svg';
 
@@ -25,6 +26,11 @@ const Label = styled.label`
   cursor: pointer;
   display: flex;
   align-items: center;
+
+  @media ${maxWidthLarge} {
+    font-size: 1.4rem;
+    line-height: 1.58;
+  }
 `;
 
 const CheckBox = styled.input`

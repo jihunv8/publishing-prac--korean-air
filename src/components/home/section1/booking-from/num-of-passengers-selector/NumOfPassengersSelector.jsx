@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { maxWidthLarge } from '../../../../../global-style/mediaSize';
 import { layoutCSS } from '../../../../../util/layoutCSS';
 
 import NumOfPassengersButton from './NumOfPassengersButton';
@@ -19,5 +20,9 @@ const NumOfPassengersSelectorWrapper = styled.div`
   padding: 3px 18px;
   border-radius: 8px;
 
+  @media ${maxWidthLarge} {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
   ${layoutCSS}
 `;

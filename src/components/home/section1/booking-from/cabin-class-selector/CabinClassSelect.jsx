@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { maxWidthLarge } from '../../../../../global-style/mediaSize';
 
 import selectIcon from '../../../../../images/icons/ico-select.svg';
 
@@ -31,6 +32,10 @@ const CabinClassSelectWrapper = styled.div`
     padding-right: 4px;
     transition: padding-right 0.2s;
   }
+
+  @media ${maxWidthLarge} {
+    position: relative;
+  }
 `;
 
 const Label = styled.label`
@@ -38,6 +43,14 @@ const Label = styled.label`
   display: flex;
   align-items: center;
   color: #767676;
+
+  @media ${maxWidthLarge} {
+    height: auto;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 `;
 
 const Select = styled.select`
@@ -50,9 +63,15 @@ const Select = styled.select`
   display: flex;
   -webkit-appearance: none;
   text-align: right;
-  cursor: pointer;
 
   &:focus {
     outline: none;
+  }
+
+  @media ${maxWidthLarge} {
+    text-align: left;
+    padding-top: 19px;
+    margin-top: 0;
+    position: relative;
   }
 `;

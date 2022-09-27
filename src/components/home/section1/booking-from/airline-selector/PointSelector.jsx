@@ -4,6 +4,7 @@ import { layoutCSS } from '../../../../../util/layoutCSS';
 import PointSelectButton from './PointSelectButton';
 
 import swapIcon from '../../../../../images/icons/booking__swap--disabled.svg';
+import { maxWidthLarge } from '../../../../../global-style/mediaSize';
 
 function PointSelector({ from = { code: 'SEL', name: '서울' }, to = { code: 'To', name: '도착지' }, layoutCSS }) {
   return (
@@ -22,6 +23,10 @@ const PointSelectorWrapper = styled.div`
   display: flex;
   align-items: flex-end;
 
+  @media ${maxWidthLarge} {
+    align-items: center;
+  }
+
   ${layoutCSS}
 `;
 
@@ -37,5 +42,9 @@ const ReverseButton = styled.button`
   &:focus,
   &:hover {
     outline: 1px solid #0064de;
+  }
+
+  @media ${maxWidthLarge} {
+    margin: 0 30px;
   }
 `;

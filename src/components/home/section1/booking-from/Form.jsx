@@ -5,6 +5,7 @@ import AirlineSelector from './airline-selector/AirlineSelector';
 import NumOfPassengersSelector from './num-of-passengers-selector/NumOfPassengersSelector';
 import CabinClassSelector from './cabin-class-selector/CabinClassSelector';
 import FormFooter from './form-footer/FormFooter';
+import { maxWidthLarge } from '../../../../global-style/mediaSize';
 
 function Form() {
   return (
@@ -13,7 +14,7 @@ function Form() {
       <AirlineSelector layoutCSS={marginTop12px} />
       <NumOfPassengersSelector layoutCSS={marginTop8px} />
       <CabinClassSelector layoutCSS={marginTop8px} />
-      <FormFooter layoutCSS={marginTop12px} />
+      <FormFooter layoutCSS={FormFooterLayoutCSS} />
       <SearchButton>항공편 검색</SearchButton>
     </FormWrapper>
   );
@@ -30,6 +31,14 @@ const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${maxWidthLarge} {
+    width: 100%;
+    padding-bottom: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: transparent;
+  }
 `;
 
 const SearchButton = styled.button`
@@ -42,6 +51,12 @@ const SearchButton = styled.button`
 
   color: #fff;
   font-weight: bold;
+
+  @media ${maxWidthLarge} {
+    height: 57px;
+    border-radius: 12px;
+    margin-top: 16px;
+  }
 `;
 
 const marginTop12px = css`
@@ -49,4 +64,12 @@ const marginTop12px = css`
 `;
 const marginTop8px = css`
   margin-top: 8px;
+`;
+
+const FormFooterLayoutCSS = css`
+  margin-top: 12px;
+
+  @media ${maxWidthLarge} {
+    margin-top: 15px;
+  }
 `;

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { maxWidthLarge } from '../../../../../global-style/mediaSize';
 import { layoutCSS } from '../../../../../util/layoutCSS';
 
 import AirlineTypeSelector from './AirlineTypeSelector';
@@ -38,4 +39,8 @@ const PointSelectorLayoutCSS = css`
 
 const DateSelectorLayoutCSS = css`
   margin-top: 10px;
+
+  @media ${maxWidthLarge} {
+    margin-top: 20px;
+  }
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { maxWidthLarge } from '../../../../../global-style/mediaSize';
 
 function PointSelectButton({ code = 'SEL', name = '서울', ...props }) {
   return (
@@ -30,6 +31,11 @@ const Code = styled.span`
   font-size: 2.6rem;
   font-weight: bold;
   line-height: 1.2;
+
+  @media ${maxWidthLarge} {
+    font-size: 3rem;
+    line-height: 1.55;
+  }
 `;
 
 const Name = styled.span`
