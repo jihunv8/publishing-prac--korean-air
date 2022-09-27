@@ -9,6 +9,7 @@ import Section3 from '../components/home/section3/Section3';
 import Section4 from '../components/home/section4/Section4';
 
 import noticeBannerMockData from './noticeBannerMockData';
+import { maxWidthLarge, maxWidthXLarge } from '../global-style/mediaSize';
 
 const [notice1Data, notice2Data] = noticeBannerMockData;
 
@@ -25,7 +26,7 @@ function Home() {
         layoutCSS={NoticeBannerLayoutCSS}
       />
       <Section2 layoutCSS={marginTop60px} />
-      <Section3 layoutCSS={marginTop60px} />
+      <Section3 layoutCSS={basicMargin} />
       <NoticeBanner
         title={notice2Data.title}
         subhead={notice2Data.subhead}
@@ -33,8 +34,8 @@ function Home() {
         bgImage={notice2Data.bgImage}
         layoutCSS={NoticeBannerLayoutCSS}
       />
-      <Section4 layoutCSS={marginTop60px} />
-      <Footer layoutCSS={marginTop100px} />
+      <Section4 layoutCSS={basicMargin} />
+      <Footer layoutCSS={FooterLayoutCSS} />
     </HomeWrapper>
   );
 }
@@ -43,12 +44,24 @@ export default Home;
 
 const HomeWrapper = styled.div``;
 
+const basicMargin = css`
+  margin-top: 60px;
+
+  @media ${maxWidthLarge} {
+    margin-top: 40px;
+  }
+`;
+
 const marginTop60px = css`
   margin-top: 60px;
 `;
 
-const marginTop100px = css`
-  margin-top: 60px;
+const FooterLayoutCSS = css`
+  margin-top: 100px;
+
+  @media ${maxWidthXLarge} {
+    margin-top: 60px;
+  }
 `;
 
 const NoticeBannerLayoutCSS = css`
