@@ -11,15 +11,18 @@ function Airline({
 }) {
   return (
     <AirlineWrapper imageUrl={imageUrl}>
-      <FromTo>
-        {from}
-        {'  -  '}
-        {to}
-      </FromTo>
-      <CabinClassAndType>
-        {cabinClass} {type}
-      </CabinClassAndType>
-      <Price>KRW {parseMoney(price)} ~</Price>
+      <Image src={imageUrl} />
+      <Content>
+        <FromTo>
+          {from}
+          {'  -  '}
+          {to}
+        </FromTo>
+        <CabinClassAndType>
+          {cabinClass} {type}
+        </CabinClassAndType>
+        <Price>KRW {parseMoney(price)} ~</Price>
+      </Content>
     </AirlineWrapper>
   );
 }
@@ -28,17 +31,27 @@ export default Airline;
 
 const AirlineWrapper = styled.a`
   display: block;
-  background: url(${({ imageUrl }) => imageUrl}) no-repeat center / cover;
-  width: 232px;
-  height: 295px;
-  padding: 20px 22px;
+  width: 100%;
   border: 1px solid transparent;
   cursor: pointer;
+  position: relative;
 
   &:hover,
   &:focus {
-    border: 1px solid #0064de;
+    border-color: #0064de;
   }
+`;
+
+const Image = styled.img`
+  display: block;
+  width: 100%;
+`;
+
+const Content = styled.div`
+  padding: 20px 22px;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 const FromTo = styled.h3`
