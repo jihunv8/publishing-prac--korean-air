@@ -11,7 +11,7 @@ function Airline({
 }) {
   return (
     <AirlineWrapper imageUrl={imageUrl}>
-      <Image src={imageUrl} />
+      <Image src={imageUrl} alt={`사진-${to}`} />
       <Content>
         <FromTo>
           {from}
