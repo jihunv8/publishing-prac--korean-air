@@ -1,23 +1,30 @@
 import styled, { css } from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
-import * as media from '../../global-style/mediaSize';
+import * as media from '../../../global-style/mediaSize';
 
-import koreanairLogoPC from '../../images/logos/logo--koreanair-pc.png';
-import koreanairLogoM from '../../images/logos/logo--koreanair-m.png';
-import skyteamLogo from '../../images/logos/logo--skyteam-pc.png';
+import koreanairLogoPC from '../../../images/logos/logo--koreanair-pc.png';
+import koreanairLogoM from '../../../images/logos/logo--koreanair-m.png';
+import skyteamLogo from '../../../images/logos/logo--skyteam-pc.png';
 
-import loginIcon from '../../images/icons/util__link--login.svg';
-import alramIcon from '../../images/icons/util__link--alram-off.svg';
-import cartIcon from '../../images/icons/util__link--cart-off.svg';
-import searchIcon from '../../images/icons/util__link--search.svg';
-import hamburgerIcon from '../../images/icons/drawer-trigger.svg';
+import loginIcon from '../../../images/icons/util__link--login.svg';
+import alramIcon from '../../../images/icons/util__link--alram-off.svg';
+import cartIcon from '../../../images/icons/util__link--cart-off.svg';
+import searchIcon from '../../../images/icons/util__link--search.svg';
+import hamburgerIcon from '../../../images/icons/drawer-trigger.svg';
 
-function Header() {
+function HeaderNav({ setSelectedMenu = () => {}, openDropdown = () => {} }) {
   const isTabletSize = useMediaQuery({ maxWidth: media.screenLarge });
 
+  const selectMenu =
+    (menu = 'book') =>
+    () => {
+      openDropdown();
+      setSelectedMenu(menu);
+    };
+
   return (
-    <HeaderWrapper>
-      <HeaderArea>
+    <HeaderNavWrapper>
+      <ContentsArea>
         <Logos>
           {isTabletSize ? (
             <a href="/">
@@ -35,12 +42,12 @@ function Header() {
             </>
           )}
         </Logos>
-        {isTabletSize || (
+        {!isTabletSize && (
           <div>
-            <NavItem>예매</NavItem>
-            <NavItem>공항</NavItem>
-            <NavItem>기내</NavItem>
-            <NavItem>스카이패스</NavItem>
+            <NavItem onClick={selectMenu('book')}>예매</NavItem>
+            <NavItem onClick={selectMenu('airport')}>공항</NavItem>
+            <NavItem onClick={selectMenu('inFlight')}>기내</NavItem>
+            <NavItem onClick={selectMenu('skypass')}>스카이패스</NavItem>
           </div>
         )}
 
@@ -54,19 +61,19 @@ function Header() {
             <MenuItemButton imgUrl={searchIcon}></MenuItemButton>
           )}
         </Menu>
-      </HeaderArea>
-    </HeaderWrapper>
+      </ContentsArea>
+    </HeaderNavWrapper>
   );
 }
 
-export default Header;
+export default HeaderNav;
 
-const HeaderWrapper = styled.header`
+const HeaderNavWrapper = styled.nav`
   border-bottom: solid 1px #d9dbe1;
   padding: 0 20px;
 `;
 
-const HeaderArea = styled.div`
+const ContentsArea = styled.div`
   margin: 0 auto;
   max-width: ${media.maxContentsArea};
   display: flex;

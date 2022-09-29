@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import Header from '../components/common/Header';
+import Header from '../components/common/header/Header';
 import Footer from '../components/common/footer/Footer';
 import NoticeBanner from '../components/home/NoticeBanner';
 import Section1 from '../components/home/section1/Section1';
