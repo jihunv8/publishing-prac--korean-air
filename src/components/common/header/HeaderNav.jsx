@@ -12,7 +12,7 @@ import cartIcon from '../../../images/icons/util__link--cart-off.svg';
 import searchIcon from '../../../images/icons/util__link--search.svg';
 import hamburgerIcon from '../../../images/icons/drawer-trigger.svg';
 
-function HeaderNav({ setSelectedMenu = () => {}, openDropdown = () => {} }) {
+function HeaderNav({ selectedMenu = '', setSelectedMenu = () => {}, openDropdown = () => {} }) {
   const isTabletSize = useMediaQuery({ maxWidth: media.screenLarge });
 
   const selectMenu =
@@ -44,10 +44,18 @@ function HeaderNav({ setSelectedMenu = () => {}, openDropdown = () => {} }) {
         </Logos>
         {!isTabletSize && (
           <div>
-            <NavItem onClick={selectMenu('book')}>예매</NavItem>
-            <NavItem onClick={selectMenu('airport')}>공항</NavItem>
-            <NavItem onClick={selectMenu('inFlight')}>기내</NavItem>
-            <NavItem onClick={selectMenu('skypass')}>스카이패스</NavItem>
+            <NavButton onClick={selectMenu('book')} selected={selectedMenu === 'book'}>
+              예매
+            </NavButton>
+            <NavButton onClick={selectMenu('airport')} selected={selectedMenu === 'airport'}>
+              공항
+            </NavButton>
+            <NavButton onClick={selectMenu('inFlight')} selected={selectedMenu === 'inFlight'}>
+              기내
+            </NavButton>
+            <NavButton onClick={selectMenu('skypass')} selected={selectedMenu === 'skypass'}>
+              스카이패스
+            </NavButton>
           </div>
         )}
 
@@ -106,7 +114,7 @@ const Logos = styled.div`
   }
 `;
 
-const NavItem = styled.button`
+const NavButton = styled.button`
   height: 90px;
   padding: 0 30px;
   border: none;
@@ -114,6 +122,35 @@ const NavItem = styled.button`
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 1.56;
+  position: relative;
+
+  &:after {
+    content: '';
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 0.4s, width 0.4s, background-color 0.4s;
+
+    ${({ selected }) =>
+      selected &&
+      css`
+        animation: select 0.4s forwards;
+
+        @keyframes select {
+          from {
+            width: calc(100% - 60px);
+            background-color: #888;
+            bottom: 14px;
+          }
+          to {
+            width: calc(100% - 40px);
+            background-color: #de001b;
+            bottom: 12px;
+          }
+        }
+      `}
+  }
 `;
 
 const Menu = styled.div`

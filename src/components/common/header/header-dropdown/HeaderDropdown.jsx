@@ -15,7 +15,7 @@ function HeaderDropdown({ selectedMenu = 'book', closeDropdown = () => {}, layou
   return (
     <HeaderDropdownWrapper layoutCSS={layoutCSS}>
       <ContentsArea>
-        {dropdownData[selectedMenu].map((data, i) => (
+        {dropdownData[selectedMenu]?.map((data, i) => (
           <LinkListContainer key={i} linkListData={data} layoutCSS={LinkListContainerLayoutCSS} />
         ))}
         <QuickMenu />

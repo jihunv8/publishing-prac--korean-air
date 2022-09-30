@@ -5,7 +5,7 @@ import HeaderDropdown from './header-dropdown/HeaderDropdown';
 import HeaderNav from './HeaderNav';
 
 function Header() {
-  const [selectedMenu, setSelectedMenu] = useState('book');
+  const [selectedMenu, setSelectedMenu] = useState('');
   const [isDropdown, setIsDropdown] = useState(false);
 
   const openDropdown = () => {
@@ -13,12 +13,13 @@ function Header() {
   };
 
   const closeDropdown = () => {
+    setSelectedMenu('');
     setIsDropdown(false);
   };
 
   return (
     <HeaderWrapper>
-      <HeaderNav setSelectedMenu={setSelectedMenu} openDropdown={openDropdown} />
+      <HeaderNav selectedMenu={selectedMenu} setSelectedMenu={setSelectedMenu} openDropdown={openDropdown} />
       <HeaderDropdownWrapper visible={isDropdown}>
         <HeaderDropdown selectedMenu={selectedMenu} closeDropdown={closeDropdown} />
       </HeaderDropdownWrapper>
