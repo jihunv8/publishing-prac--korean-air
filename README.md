@@ -58,6 +58,13 @@ npm start
   </div>
 </details>
 
+<details>
+  <summary>DropDown - PC</summary>
+  <div markdown="1">
+    <img alt='Header dropdown' src='https://user-images.githubusercontent.com/78804014/193190541-0f9012de-7f3e-45fd-9a3b-e2375e058b35.gif'/>
+  </div>
+</details>
+
 ### Section1
 
 <details>
@@ -87,6 +94,13 @@ npm start
   <summary>Mobile & Tablet</summary>
   <div markdown="1">
     <img alt='Section2 M&T' src='https://user-images.githubusercontent.com/78804014/193172861-d2751ea4-279f-44b3-a984-37dba2111cbe.png'/>
+  </div>
+</details>
+
+<details>
+  <summary>Swiper</summary>
+  <div markdown="1">
+    <img alt='Section2 swiper' src='https://user-images.githubusercontent.com/78804014/193190728-e5cefd20-c369-4c8e-80eb-e25d523f0236.gif'/>
   </div>
 </details>
 
@@ -154,4 +168,10 @@ npm start
   </div>
 </details>
 
+<details>
+  <summary>DropDown - Mobile & Tablet</summary>
+  <div markdown="1">
+    <img alt='Section3 drop-down M&T' src='https://user-images.githubusercontent.com/78804014/193190828-fd6e3ff9-c083-4e53-9f10-8ab1d82ebc0f.gif'/>
+  </div>
+</details>
 
