@@ -59,7 +59,7 @@ npm start
 </details>
 
 <details>
-  <summary>DropDown - PC</summary>
+  <summary>DropDown - PC (GIF)</summary>
   <div markdown="1">
     <img alt='Header dropdown' src='https://user-images.githubusercontent.com/78804014/193190541-0f9012de-7f3e-45fd-9a3b-e2375e058b35.gif'/>
   </div>
@@ -98,7 +98,7 @@ npm start
 </details>
 
 <details>
-  <summary>Swiper</summary>
+  <summary>Swiper (GIF)</summary>
   <div markdown="1">
     <img alt='Section2 swiper' src='https://user-images.githubusercontent.com/78804014/193190728-e5cefd20-c369-4c8e-80eb-e25d523f0236.gif'/>
   </div>
