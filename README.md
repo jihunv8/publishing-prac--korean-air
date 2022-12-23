@@ -169,7 +169,7 @@ npm start
 </details>
 
 <details>
-  <summary>DropDown - Mobile & Tablet</summary>
+  <summary>DropDown - Mobile & Tablet (GIF)</summary>
   <div markdown="1">
     <img alt='Section3 drop-down M&T' src='https://user-images.githubusercontent.com/78804014/193190828-fd6e3ff9-c083-4e53-9f10-8ab1d82ebc0f.gif'/>
   </div>
