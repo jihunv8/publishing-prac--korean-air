@@ -5,11 +5,9 @@ React와 Styled-Components를 사용하여 웹페이지 구현속도를 측정�
 
 <br/>
 
-## 시작
-```
-npm i
-npm start
-```
+## 배포URL
+https://koreanair-clone.netlify.app
+
 <br/>
 
 ## 사용 스택
