@@ -5,7 +5,7 @@ React와 Styled-Components를 사용하여 웹페이지 구현속도를 측정�
 
 <br/>
 
-## 배포URL
+## 배포 URL
 https://koreanair-clone.netlify.app
 
 <br/>
